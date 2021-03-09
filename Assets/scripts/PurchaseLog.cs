@@ -5,6 +5,8 @@ using UnityEngine;
 public class PurchaseLog : MonoBehaviour
 {
     public GameObject AutoCookie;
+
+    
     public AudioSource playsound;
 
     public void StartAutoCookie()
@@ -22,6 +24,6 @@ public class PurchaseLog : MonoBehaviour
         GlobalBaker.numberOfBakers += 1;
 
     }
-
+   
 
 }    

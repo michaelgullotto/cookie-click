@@ -22,7 +22,7 @@ public class GlobalBaker : MonoBehaviour
     void Update()
     {
         currentCash = GlobalCash.CashCount;
-        bakerStats.GetComponent<Text>().text = "Bakers" + numberOfBakers + "@" + bakePerSec  + "Per Second";
+        bakerStats.GetComponent <Text>().text = "Bakers: " + numberOfBakers + " @ " + bakePerSec  + "Per Second";
         fakeText.GetComponent<Text>().text = "BuyBaker - $" + bakerValue;
         realText.GetComponent<Text>().text = "BuyBaker - $" + bakerValue;
       
@@ -39,5 +39,13 @@ public class GlobalBaker : MonoBehaviour
             fakeButton.SetActive(true);
             turnOffButton = false;
         }
+        // stops purchases if gamble to much
+        if (currentCash < bakerValue)
+        {
+            realButton.SetActive(false);
+            fakeButton.SetActive(true);
+            turnOffButton = false;
+        }
+
     }
 }

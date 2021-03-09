@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Gamble : MonoBehaviour
 {
     public int gamble;
@@ -32,7 +32,7 @@ public class Gamble : MonoBehaviour
     {
         gamble = GlobalCash.CashCount / 2;
 
-      //  GambleDisplay.GetComponent<Text>().text =( "Gamble cash" + gamble )  ;
+      GambleDisplay.GetComponent<Text>().text =( "Gamble cash: " + gamble );
 
     }
 
