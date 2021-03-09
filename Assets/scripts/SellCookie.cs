@@ -12,7 +12,7 @@ public class SellCookie : MonoBehaviour
 
     public GameObject statusBox;
     public GameObject textBox;
-
+    public AudioSource cashsound;
     public void ClickTheButton ()
     
     {
@@ -24,6 +24,7 @@ public class SellCookie : MonoBehaviour
         }
         else
         {
+            cashsound.Play();
             GlobalCookies.CookieCount -= 1;
             GlobalCash.CashCount += 1;
         }
